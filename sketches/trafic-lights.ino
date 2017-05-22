@@ -1,3 +1,4 @@
+// For reference, see: http://www.makeuseof.com/tag/arduino-traffic-light-controller/
 int button = 12;
 int red = 10;
 int yellow = 9;
