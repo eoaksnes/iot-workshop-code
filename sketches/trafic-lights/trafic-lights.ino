@@ -15,13 +15,20 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
+  if (pressed_button()) {
+      changeState();
+  }
+  assertState();
+}
+
+bool pressed_button() {
   if (digitalRead(button) == HIGH) {
     delay(15);  // Software debounce
     if (digitalRead(button) == HIGH) {
-      changeState();
+      return true;
     }
   }
-  assertState();
+  return false;
 }
 
 void assertState() {
